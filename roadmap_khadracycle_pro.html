@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHADRACYCLE – Roadmap Stratégique et Impactante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-HSSyvJ1Jt1PqMv3q8+3L3R1h9R+5h5d4a4N2f5E4q5c5D5P5A5X5B5C5D5E5F5G5H5I5J5K5L5M5N5O5P5Q5R5S5T5U5V5W5X5Y5Z" crossorigin="anonymous">
+
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Vert forêt pour KHADRACYCLE */
+            --secondary-color: #8BC34A; /* Vert clair pour accents */
+            --dark-bg: #1A202C; /* Gris très foncé (presque noir) */
+            --medium-bg: #2D3748; /* Gris foncé pour les cartes */
+            --light-text: #E2E8F0; /* Texte clair */
+            --subtle-text: #A0AEC0; /* Texte secondaire, détails */
+            --border-color: #4A5568; /* Bordures des éléments */
+            --header-bg: #28303C; /* Fond des en-têtes de tableau */
+            --shadow-color: rgba(0, 0, 0, 0.6);
+            --gradient-start: #1A202C;
+            --gradient-end: #0A101C;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            color: var(--light-text);
+            padding: 20px;
+            line-height: 1.6;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 20px auto;
+            background-color: var(--dark-bg);
+            padding: 30px 50px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px var(--shadow-color);
+            border: 1px solid #3A445C;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 3.5em;
+            border-bottom: 5px solid var(--primary-color);
+            padding-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+            animation: slideInLeft 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--secondary-color);
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+            animation: slideInRight 1s ease-out 0.3s backwards;
+        }
+        
+        h2 i {
+            color: var(--primary-color);
+            font-size: 1.2em;
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .section-card {
+            background-color: var(--medium-bg);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid #3A445C;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 0; /* Géré par le padding du section-card */
+            background-color: var(--dark-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            animation: zoomIn 0.8s ease-out 0.5s backwards;
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 18px;
+            text-align: left;
+            vertical-align: middle; /* Centrer verticalement le contenu */
+        }
+
+        th {
+            background-color: var(--header-bg);
+            color: var(--light-text);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-size: 0.95em;
+        }
+
+        tr:nth-child(even) { background-color: #26303D; } /* Légèrement plus clair */
+        tr:nth-child(odd) { background-color: var(--dark-bg); }
+        tr:hover {
+            background-color: #3A445C; /* Surbrillance au survol */
+            transition: background-color 0.2s ease;
+        }
+
+        .phase td:first-child { font-weight: 700; color: var(--primary-color); font-size: 1.05em; }
+        .details { font-size: 0.9em; color: var(--subtle-text); }
+        .progression {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.4em;
+            letter-spacing: 1px;
+            white-space: nowrap; /* Empêche le retour à la ligne */
+        }
+        
+        .intro, .conclusion {
+            background-color: var(--medium-bg);
+            padding: 30px;
+            border-left: 6px solid var(--primary-color);
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            font-size: 1.1em;
+        }
+        .intro p, .conclusion p {
+            margin: 0 0 15px 0;
+            color: var(--subtle-text);
+        }
+        .intro strong, .conclusion strong {
+            color: var(--light-text);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: var(--subtle-text);
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        /* Styles spécifiques pour les colonnes de tableaux */
+        .objectifs-table th:nth-child(1), .ressources-table th:nth-child(1) { width: 12%; }
+        .objectifs-table th:nth-child(2), .kpi-table th:nth-child(1) { width: 18%; }
+        .risques-table th:nth-child(1) { width: 22%; }
+        .risques-table td:nth-child(3) { font-size: 0.85em; } /* Texte plus petit pour les atténuations */
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .container {
+                padding: 20px 30px;
+            }
+            h1 {
+                font-size: 2.8em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            th, td {
+                padding: 12px;
+                font-size: 0.9em;
+            }
+            .progression {
+                font-size: 1.2em;
+            }
+            .section-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px 20px;
+                margin: 10px auto;
+            }
+            h1 {
+                font-size: 2em;
+                margin-bottom: 30px;
+                padding-bottom: 10px;
+            }
+            h2 {
+                font-size: 1.5em;
+                flex-direction: column; /* Stack icon and text */
+                align-items: flex-start;
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+            h2 i {
+                margin-bottom: 5px;
+            }
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid var(--border-color);
+                margin-bottom: 15px;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid var(--border-color);
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: 600;
+                color: var(--secondary-color);
+            }
+            .phase td:first-child::before { color: var(--primary-color); } /* Spécifique pour la première colonne */
+            .progression { text-align: right; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 KHADRACYCLE – Roadmap Stratégique pour un Recyclage Intelligent</h1>
+
+        <div class="intro">
+            <p>Ce document présente la feuille de route stratégique de <strong>KHADRACYCLE</strong>, un projet innovant visant à moderniser et optimiser le tri des déchets en Algérie, en utilisant des technologies avancées pour un impact environnemental positif.</p>
+            <p>Notre engagement est de construire un avenir plus propre et une économie circulaire en transformant la gestion des déchets par l'innovation et la collaboration.</p>
+        </div>
+
+        <h2 id="phases"><i class="fas fa-project-diagram"></i> Frise Chronologique Simplifiée (Phases clés)</h2>
+        <div class="section-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Étape Majeure</th>
+                        <th>Progression Estimée</th>
+                        <th>Détails</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="phase">
+                        <td data-label="Phase">Phase 1: Validation Technique</td>
+                        <td data-label="Étape Majeure">Prototype validé et testé</td>
+                        <td data-label="Progression Estimée" class="progression">■■■</td>
+                        <td data-label="Détails" class="details">Tests intensifs du RVM (robustesse, précision IA, sécurité). Optimisation de l'application mobile (ergonomie, scalabilité). Certification et conformité réglementaire.</td>
+                    </tr>
+                    <tr class="phase">
+                        <td data-label="Phase">Phase 2: Pré-série & Feedback</td>
+                        <td data-label="Étape Majeure">Déploiement de 10 RVM pilotes</td>
+                        <td data-label="Progression Estimée" class="progression">■■■■</td>
+                        <td data-label="Détails" class="details">Fabrication et installation de 10 unités pilotes dans des lieux stratégiques (universités, centres commerciaux, APC). Collecte de données réelles (taux d'utilisation, satisfaction) et ajustements techniques.</td>
+                    </tr>
+                    <tr class="phase">
+                        <td data-label="Phase">Phase 3: Industrialisation & Partenariats</td>
+                        <td data-label="Étape Majeure">Production à grande échelle</td>
+                        <td data-label="Progression Estimée" class="progression">■■■■■</td>
+                        <td data-label="Détails" class="details">Mise en place d'un partenariat avec un fabricant local (métallurgie, électronique). Standardisation des composants (capteurs, Raspberry Pi, servomoteurs). Optimisation des coûts de production.</td>
+                    </tr>
+                    <tr class="phase">
+                        <td data-label="Phase">Phase 4: Déploiement National</td>
+                        <td data-label="Étape Majeure">Extension à 200 RVM</td>
+                        <td data-label="Progression Estimée" class="progression">■■■■■■</td>
+                        <td data-label="Détails" class="details">Installation de 200 RVM à l'échelle nationale (grandes villes). Intensification des partenariats commerciaux (supermarchés, opérateurs télécoms) et avec les collectivités.</td>
+                    </tr>
+                    <tr class="phase">
+                        <td data-label="Phase">Phase 5: Expansion Régionale & Innovation</td>
+                        <td data-label="Étape Majeure">Internationalisation & R&D</td>
+                        <td data-label="Progression Estimée" class="progression">■■■■■■■</td>
+                        <td data-label="Détails" class="details">Extension régionale (Maghreb) et adaptation aux marchés locaux. Poursuite de la R&D pour de nouvelles fonctionnalités (reconnaissance de plus de matériaux, IA améliorée).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="objectifs"><i class="fas fa-bullseye"></i> Objectifs par Horizon</h2>
+        <div class="section-card">
+            <table class="objectifs-table">
+                <thead>
+                    <tr>
+                        <th>Horizon</th>
+                        <th>RVM installés</th>
+                        <th>Utilisateurs actifs</th>
+                        <th>Partenariats</th>
+                        <th>Impact attendu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Horizon">6 mois</td>
+                        <td data-label="RVM installés">10 unités pilotes</td>
+                        <td data-label="Utilisateurs actifs">2 000 premiers utilisateurs</td>
+                        <td data-label="Partenariats">Validation avec 2 APC + 1 université pilote</td>
+                        <td data-label="Impact attendu">✅ Validation technique & Premiers retours utilisateurs</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Horizon">1 an</td>
+                        <td data-label="RVM installés">50 unités déployées</td>
+                        <td data-label="Utilisateurs actifs">20 000 utilisateurs engagés</td>
+                        <td data-label="Partenariats">Partenariats avec 10 entreprises (supermarchés, télécoms) + 3 wilayas</td>
+                        <td data-label="Impact attendu">📈 Adoption citoyenne significative & Génération des premiers revenus</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Horizon">3 ans</td>
+                        <td data-label="RVM installés">200 unités opérationnelles</td>
+                        <td data-label="Utilisateurs actifs">100 000 utilisateurs fidélisés</td>
+                        <td data-label="Partenariats">30+ partenaires stratégiques (nationaux et régionaux) + 10 grandes villes</td>
+                        <td data-label="Impact attendu">🌍 Contribution mesurable (≥5%) aux objectifs nationaux de recyclage & Extension au Maghreb</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="ressources"><i class="fas fa-toolbox"></i> Ressources Nécessaires</h2>
+        <div class="section-card">
+            <table class="ressources-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Humaines</th>
+                        <th>Financières</th>
+                        <th>Techniques</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Phase">6 mois</td>
+                        <td data-label="Humaines">Équipe technique (développeurs Full-Stack, ingénieurs IA/Hardware), techniciens de maintenance</td>
+                        <td data-label="Financières">~15 M DZD (Prototypes, tests terrain, communication initiale)</td>
+                        <td data-label="Techniques">Atelier de prototypage, infrastructure cloud sécurisée (hébergement, API), capteurs &amp; modèles IA</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Phase">1 an</td>
+                        <td data-label="Humaines">Renforcement équipe marketing &amp; communication, gestionnaire de partenariats</td>
+                        <td data-label="Financières">~50 M DZD (Production série limitée, marketing, déploiement)</td>
+                        <td data-label="Techniques">Chaîne de production semi-industrielle, API robuste, outils de monitoring et reporting</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Phase">3 ans</td>
+                        <td data-label="Humaines">Équipe logistique nationale, support client dédié, R&amp;D et veille technologique</td>
+                        <td data-label="Financières">&gt;100 M DZD (Industrialisation, déploiement national, expansion régionale, R&amp;D)</td>
+                        <td data-label="Techniques">Infrastructure nationale (logistique, maintenance), réseau de collecte, unités mobiles de recyclage</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="kpi"><i class="fas fa-chart-line"></i> Indicateurs Clés de Performance (KPI)</h2>
+        <div class="section-card">
+            <table class="kpi-table">
+                <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>KPI</th>
+                        <th>Objectif</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Catégorie">Opérationnel</td>
+                        <td data-label="KPI">Taux de disponibilité RVM, Précision IA de tri</td>
+                        <td data-label="Objectif">&gt;95% disponibilité, &gt;93% précision</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Catégorie">Utilisateurs</td>
+                        <td data-label="KPI">Nombre d'utilisateurs actifs, Taux de rétention, Nombre de dépôts par utilisateur</td>
+                        <td data-label="Objectif">100k utilisateurs sous 3 ans, 70% rétention, &gt;3 dépôts/mois</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Catégorie">Financier</td>
+                        <td data-label="KPI">Revenus (sponsoring, vente matériaux), Coût par RVM, ROI</td>
+                        <td data-label="Objectif">Rentabilité sous 2 ans, Croissance annuelle &gt;20%</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Catégorie">Impact Environnemental</td>
+                        <td data-label="KPI">Volume de déchets recyclés (kg/tonnes), Réduction des déchets en décharge</td>
+                        <td data-label="Objectif">Atteindre 5% de l'objectif national de recyclage sous 3 ans</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 id="risks"><i class="fas fa-exclamation-triangle"></i> Gestion des Risques & Mesures d'Atténuation</h2>
+        <div class="section-card">
+            <table class="risques-table">
+                <thead>
+                    <tr>
+                        <th>Risque</th>
+                        <th>Impact</th>
+                        <th>Mesure d'atténuation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Risque">Financement insuffisant</td>
+                        <td data-label="Impact">Échec du déploiement</td>
+                        <td data-label="Mesure d'atténuation">Diversification des sources de financement (subventions, investisseurs privés, crowdfunding)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Risque">Résistance au changement / faible adoption</td>
+                        <td data-label="Impact">Projet non viable</td>
+                        <td data-label="Mesure d'atténuation">Campagnes de sensibilisation ludiques, système de récompenses attractif, marketing ciblé</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Risque">Pannes techniques RVM</td>
+                        <td data-label="Impact">Perte de confiance utilisateur, coûts de maintenance élevés</td>
+                        <td data-label="Mesure d'atténuation">Maintenance préventive, conception robuste, équipe de support technique réactive, stock de pièces détachées</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Risque">Concurrence accrue</td>
+                        <td data-label="Impact">Perte de parts de marché</td>
+                        <td data-label="Mesure d'atténuation">Innovation continue (R&amp;D), protection de la propriété intellectuelle, partenariats stratégiques</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Risque">Évolution réglementaire</td>
+                        <td data-label="Impact">Ajustements coûteux, retards</td>
+                        <td data-label="Mesure d'atténuation">Veille réglementaire active, collaboration avec les autorités, flexibilité du modèle d'affaires</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>KHADRACYCLE</strong> est un engagement envers un avenir durable. Nous sommes passionnés par l'innovation et déterminés à faire une différence significative dans la gestion des déchets et la sensibilisation environnementale en Algérie et au-delà.</p>
+            <p>Pour toute question, information complémentaire ou opportunité de partenariat, n'hésitez pas à nous contacter : <strong><a href="mailto:laribinacer2002@gmail.com">laribinacer2002@gmail.com</a></strong>.</p>
+        </div>
+
+        <footer>
+            <p><em>© KHADRACYCLE – Tous droits réservés.</em></p>
+        </footer>
+    </div>
+</body>
+</html>
