@@ -3,491 +3,762 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KHADRACYCLE – Roadmap Stratégique et Impactante</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-HSSyvJ1Jt1PqMv3q8+3L3R1h9R+5h5d4a4N2f5E4q5c5D5P5A5X5B5C5D5E5F5G5H5I5J5K5L5M5N5O5P5Q5R5S5T5U5V5W5X5Y5Z" crossorigin="anonymous">
-
+    <title>Modèle Économique KHADRACYCLE</title>
     <style>
-        :root {
-            --primary-color: #4CAF50; /* Vert forêt pour KHADRACYCLE */
-            --secondary-color: #8BC34A; /* Vert clair pour accents */
-            --dark-bg: #1A202C; /* Gris très foncé (presque noir) */
-            --medium-bg: #2D3748; /* Gris foncé pour les cartes */
-            --light-text: #E2E8F0; /* Texte clair */
-            --subtle-text: #A0AEC0; /* Texte secondaire, détails */
-            --border-color: #4A5568; /* Bordures des éléments */
-            --header-bg: #28303C; /* Fond des en-têtes de tableau */
-            --shadow-color: rgba(0, 0, 0, 0.6);
-            --gradient-start: #1A202C;
-            --gradient-end: #0A101C;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-            color: var(--light-text);
-            padding: 20px;
-            line-height: 1.6;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2d3748;
+            padding: 20px;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
-
+        
         .container {
-            width: 100%;
-            max-width: 1300px;
-            margin: 20px auto;
-            background-color: var(--dark-bg);
-            padding: 30px 50px;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px var(--shadow-color);
-            border: 1px solid #3A445C;
-            animation: fadeIn 1s ease-out;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h1 {
-            font-family: 'Poppins', sans-serif;
-            color: var(--primary-color);
+        
+        .header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 60px 40px;
             text-align: center;
-            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .header h1 {
             font-size: 3.5em;
-            border-bottom: 5px solid var(--primary-color);
-            padding-bottom: 20px;
-            letter-spacing: 2px;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
-            animation: slideInLeft 1s ease-out;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            letter-spacing: -1px;
         }
-
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
         }
-
-        h2 {
-            font-family: 'Poppins', sans-serif;
-            color: var(--secondary-color);
-            margin-top: 60px;
-            margin-bottom: 30px;
-            font-size: 2.5em;
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
             display: flex;
             align-items: center;
             gap: 15px;
-            border-bottom: 2px solid var(--border-color);
+            font-size: 2em;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 30px;
             padding-bottom: 15px;
-            animation: slideInRight 1s ease-out 0.3s backwards;
+            border-bottom: 3px solid #e5e7eb;
         }
         
-        h2 i {
-            color: var(--primary-color);
+        .section-title .icon {
             font-size: 1.2em;
         }
-
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        .section-card {
-            background-color: var(--medium-bg);
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border: 1px solid #3A445C;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .section-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-bottom: 0; /* Géré par le padding du section-card */
-            background-color: var(--dark-bg);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            animation: zoomIn 0.8s ease-out 0.5s backwards;
-        }
-
-        @keyframes zoomIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 18px;
-            text-align: left;
-            vertical-align: middle; /* Centrer verticalement le contenu */
-        }
-
-        th {
-            background-color: var(--header-bg);
-            color: var(--light-text);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            font-size: 0.95em;
-        }
-
-        tr:nth-child(even) { background-color: #26303D; } /* Légèrement plus clair */
-        tr:nth-child(odd) { background-color: var(--dark-bg); }
-        tr:hover {
-            background-color: #3A445C; /* Surbrillance au survol */
-            transition: background-color 0.2s ease;
-        }
-
-        .phase td:first-child { font-weight: 700; color: var(--primary-color); font-size: 1.05em; }
-        .details { font-size: 0.9em; color: var(--subtle-text); }
-        .progression {
-            color: var(--secondary-color);
-            font-weight: bold;
-            font-size: 1.4em;
-            letter-spacing: 1px;
-            white-space: nowrap; /* Empêche le retour à la ligne */
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
         
-        .intro, .conclusion {
-            background-color: var(--medium-bg);
-            padding: 30px;
-            border-left: 6px solid var(--primary-color);
-            margin-bottom: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            font-size: 1.1em;
+        .card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 25px;
+            border-radius: 16px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
         }
-        .intro p, .conclusion p {
-            margin: 0 0 15px 0;
-            color: var(--subtle-text);
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #10b981;
         }
-        .intro strong, .conclusion strong {
-            color: var(--light-text);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
+        
+        .card-title {
             font-size: 0.9em;
-            color: var(--subtle-text);
-        }
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
+            color: #64748b;
+            margin-bottom: 8px;
             font-weight: 600;
-            transition: color 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
+        
+        .card-value {
+            font-size: 2.5em;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 5px;
         }
-
-        /* Styles spécifiques pour les colonnes de tableaux */
-        .objectifs-table th:nth-child(1), .ressources-table th:nth-child(1) { width: 12%; }
-        .objectifs-table th:nth-child(2), .kpi-table th:nth-child(1) { width: 18%; }
-        .risques-table th:nth-child(1) { width: 22%; }
-        .risques-table td:nth-child(3) { font-size: 0.85em; } /* Texte plus petit pour les atténuations */
-
-        /* Responsive adjustments */
-        @media (max-width: 900px) {
-            .container {
-                padding: 20px 30px;
-            }
-            h1 {
-                font-size: 2.8em;
-            }
-            h2 {
+        
+        .card-desc {
+            font-size: 0.85em;
+            color: #64748b;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 30px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 18px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover td {
+            background-color: #f9fafb;
+        }
+        
+        .total-row {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%) !important;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #166534;
+        }
+        
+        .total-row:hover {
+            background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%) !important;
+        }
+        
+        .revenue-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border-left: 5px solid #10b981;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .revenue-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .revenue-item h3 {
+            color: #1f2937;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .revenue-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .revenue-item ul li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            color: #4b5563;
+        }
+        
+        .revenue-item ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .revenue-item .highlight {
+            display: inline-block;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: #92400e;
+            margin-top: 10px;
+        }
+        
+        .projection-table {
+            margin: 30px 0;
+        }
+        
+        .projection-table th {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        }
+        
+        .projection-table .positive {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            color: #065f46;
+            font-weight: 700;
+        }
+        
+        .projection-table .negative {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            color: #991b1b;
+            font-weight: 700;
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .impact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .impact-card:hover {
+            border-color: #10b981;
+            transform: scale(1.05);
+        }
+        
+        .impact-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .impact-card .value {
+            font-size: 2em;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        
+        .impact-card .label {
+            font-size: 0.9em;
+            color: #64748b;
+            font-weight: 600;
+        }
+        
+        .summary-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            margin-top: 50px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .summary-box h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 800;
+        }
+        
+        .summary-box .summary-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .summary-box .summary-item .icon {
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+        
+        .summary-box .summary-item .text {
+            flex: 1;
+        }
+        
+        .summary-box .highlight {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #78350f;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
                 font-size: 2em;
             }
-            th, td {
-                padding: 12px;
+            
+            .header .subtitle {
+                font-size: 1em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
                 font-size: 0.9em;
             }
-            .progression {
-                font-size: 1.2em;
+            
+            th, td {
+                padding: 12px 10px;
             }
-            .section-card {
-                padding: 20px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px 20px;
-                margin: 10px auto;
-            }
-            h1 {
-                font-size: 2em;
-                margin-bottom: 30px;
-                padding-bottom: 10px;
-            }
-            h2 {
-                font-size: 1.5em;
-                flex-direction: column; /* Stack icon and text */
-                align-items: flex-start;
-                margin-top: 40px;
-                margin-bottom: 20px;
-            }
-            h2 i {
-                margin-bottom: 5px;
-            }
-            table, thead, tbody, th, td, tr {
-                display: block;
-            }
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            tr {
-                border: 1px solid var(--border-color);
-                margin-bottom: 15px;
-                border-radius: 8px;
-                overflow: hidden;
-            }
-            td {
-                border: none;
-                border-bottom: 1px solid var(--border-color);
-                position: relative;
-                padding-left: 50%;
-                text-align: right;
-            }
-            td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 10px;
-                width: 45%;
-                padding-right: 10px;
-                white-space: nowrap;
-                text-align: left;
-                font-weight: 600;
-                color: var(--secondary-color);
-            }
-            .phase td:first-child::before { color: var(--primary-color); } /* Spécifique pour la première colonne */
-            .progression { text-align: right; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🚀 KHADRACYCLE – Roadmap Stratégique pour un Recyclage Intelligent</h1>
-
-        <div class="intro">
-            <p>Ce document présente la feuille de route stratégique de <strong>KHADRACYCLE</strong>, un projet innovant visant à moderniser et optimiser le tri des déchets en Algérie, en utilisant des technologies avancées pour un impact environnemental positif.</p>
-            <p>Notre engagement est de construire un avenir plus propre et une économie circulaire en transformant la gestion des déchets par l'innovation et la collaboration.</p>
+        <div class="header">
+            <h1> KHADRACYCLE</h1>
+            <div class="subtitle">Modèle Économique Complet • Version Marché</div>
         </div>
-
-        <h2 id="phases"><i class="fas fa-project-diagram"></i> Frise Chronologique Simplifiée (Phases clés)</h2>
-        <div class="section-card">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Phase</th>
-                        <th>Étape Majeure</th>
-                        <th>Progression Estimée</th>
-                        <th>Détails</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="phase">
-                        <td data-label="Phase">Phase 1: Validation Technique</td>
-                        <td data-label="Étape Majeure">Prototype validé et testé</td>
-                        <td data-label="Progression Estimée" class="progression">■■■</td>
-                        <td data-label="Détails" class="details">Tests intensifs du RVM (robustesse, précision IA, sécurité). Optimisation de l'application mobile (ergonomie, scalabilité). Certification et conformité réglementaire.</td>
-                    </tr>
-                    <tr class="phase">
-                        <td data-label="Phase">Phase 2: Pré-série & Feedback</td>
-                        <td data-label="Étape Majeure">Déploiement de 10 RVM pilotes</td>
-                        <td data-label="Progression Estimée" class="progression">■■■■</td>
-                        <td data-label="Détails" class="details">Fabrication et installation de 10 unités pilotes dans des lieux stratégiques (universités, centres commerciaux, APC). Collecte de données réelles (taux d'utilisation, satisfaction) et ajustements techniques.</td>
-                    </tr>
-                    <tr class="phase">
-                        <td data-label="Phase">Phase 3: Industrialisation & Partenariats</td>
-                        <td data-label="Étape Majeure">Production à grande échelle</td>
-                        <td data-label="Progression Estimée" class="progression">■■■■■</td>
-                        <td data-label="Détails" class="details">Mise en place d'un partenariat avec un fabricant local (métallurgie, électronique). Standardisation des composants (capteurs, Raspberry Pi, servomoteurs). Optimisation des coûts de production.</td>
-                    </tr>
-                    <tr class="phase">
-                        <td data-label="Phase">Phase 4: Déploiement National</td>
-                        <td data-label="Étape Majeure">Extension à 200 RVM</td>
-                        <td data-label="Progression Estimée" class="progression">■■■■■■</td>
-                        <td data-label="Détails" class="details">Installation de 200 RVM à l'échelle nationale (grandes villes). Intensification des partenariats commerciaux (supermarchés, opérateurs télécoms) et avec les collectivités.</td>
-                    </tr>
-                    <tr class="phase">
-                        <td data-label="Phase">Phase 5: Expansion Régionale & Innovation</td>
-                        <td data-label="Étape Majeure">Internationalisation & R&D</td>
-                        <td data-label="Progression Estimée" class="progression">■■■■■■■</td>
-                        <td data-label="Détails" class="details">Extension régionale (Maghreb) et adaptation aux marchés locaux. Poursuite de la R&D pour de nouvelles fonctionnalités (reconnaissance de plus de matériaux, IA améliorée).</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 id="objectifs"><i class="fas fa-bullseye"></i> Objectifs par Horizon</h2>
-        <div class="section-card">
-            <table class="objectifs-table">
-                <thead>
-                    <tr>
-                        <th>Horizon</th>
-                        <th>RVM installés</th>
-                        <th>Utilisateurs actifs</th>
-                        <th>Partenariats</th>
-                        <th>Impact attendu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Horizon">6 mois</td>
-                        <td data-label="RVM installés">10 unités pilotes</td>
-                        <td data-label="Utilisateurs actifs">2 000 premiers utilisateurs</td>
-                        <td data-label="Partenariats">Validation avec 2 APC + 1 université pilote</td>
-                        <td data-label="Impact attendu">✅ Validation technique & Premiers retours utilisateurs</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Horizon">1 an</td>
-                        <td data-label="RVM installés">50 unités déployées</td>
-                        <td data-label="Utilisateurs actifs">20 000 utilisateurs engagés</td>
-                        <td data-label="Partenariats">Partenariats avec 10 entreprises (supermarchés, télécoms) + 3 wilayas</td>
-                        <td data-label="Impact attendu">📈 Adoption citoyenne significative & Génération des premiers revenus</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Horizon">3 ans</td>
-                        <td data-label="RVM installés">200 unités opérationnelles</td>
-                        <td data-label="Utilisateurs actifs">100 000 utilisateurs fidélisés</td>
-                        <td data-label="Partenariats">30+ partenaires stratégiques (nationaux et régionaux) + 10 grandes villes</td>
-                        <td data-label="Impact attendu">🌍 Contribution mesurable (≥5%) aux objectifs nationaux de recyclage & Extension au Maghreb</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 id="ressources"><i class="fas fa-toolbox"></i> Ressources Nécessaires</h2>
-        <div class="section-card">
-            <table class="ressources-table">
-                <thead>
-                    <tr>
-                        <th>Phase</th>
-                        <th>Humaines</th>
-                        <th>Financières</th>
-                        <th>Techniques</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Phase">6 mois</td>
-                        <td data-label="Humaines">Équipe technique (développeurs Full-Stack, ingénieurs IA/Hardware), techniciens de maintenance</td>
-                        <td data-label="Financières">~15 M DZD (Prototypes, tests terrain, communication initiale)</td>
-                        <td data-label="Techniques">Atelier de prototypage, infrastructure cloud sécurisée (hébergement, API), capteurs &amp; modèles IA</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Phase">1 an</td>
-                        <td data-label="Humaines">Renforcement équipe marketing &amp; communication, gestionnaire de partenariats</td>
-                        <td data-label="Financières">~50 M DZD (Production série limitée, marketing, déploiement)</td>
-                        <td data-label="Techniques">Chaîne de production semi-industrielle, API robuste, outils de monitoring et reporting</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Phase">3 ans</td>
-                        <td data-label="Humaines">Équipe logistique nationale, support client dédié, R&amp;D et veille technologique</td>
-                        <td data-label="Financières">&gt;100 M DZD (Industrialisation, déploiement national, expansion régionale, R&amp;D)</td>
-                        <td data-label="Techniques">Infrastructure nationale (logistique, maintenance), réseau de collecte, unités mobiles de recyclage</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 id="kpi"><i class="fas fa-chart-line"></i> Indicateurs Clés de Performance (KPI)</h2>
-        <div class="section-card">
-            <table class="kpi-table">
-                <thead>
-                    <tr>
-                        <th>Catégorie</th>
-                        <th>KPI</th>
-                        <th>Objectif</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Catégorie">Opérationnel</td>
-                        <td data-label="KPI">Taux de disponibilité RVM, Précision IA de tri</td>
-                        <td data-label="Objectif">&gt;95% disponibilité, &gt;93% précision</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Catégorie">Utilisateurs</td>
-                        <td data-label="KPI">Nombre d'utilisateurs actifs, Taux de rétention, Nombre de dépôts par utilisateur</td>
-                        <td data-label="Objectif">100k utilisateurs sous 3 ans, 70% rétention, &gt;3 dépôts/mois</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Catégorie">Financier</td>
-                        <td data-label="KPI">Revenus (sponsoring, vente matériaux), Coût par RVM, ROI</td>
-                        <td data-label="Objectif">Rentabilité sous 2 ans, Croissance annuelle &gt;20%</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Catégorie">Impact Environnemental</td>
-                        <td data-label="KPI">Volume de déchets recyclés (kg/tonnes), Réduction des déchets en décharge</td>
-                        <td data-label="Objectif">Atteindre 5% de l'objectif national de recyclage sous 3 ans</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 id="risks"><i class="fas fa-exclamation-triangle"></i> Gestion des Risques & Mesures d'Atténuation</h2>
-        <div class="section-card">
-            <table class="risques-table">
-                <thead>
-                    <tr>
-                        <th>Risque</th>
-                        <th>Impact</th>
-                        <th>Mesure d'atténuation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Risque">Financement insuffisant</td>
-                        <td data-label="Impact">Échec du déploiement</td>
-                        <td data-label="Mesure d'atténuation">Diversification des sources de financement (subventions, investisseurs privés, crowdfunding)</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Risque">Résistance au changement / faible adoption</td>
-                        <td data-label="Impact">Projet non viable</td>
-                        <td data-label="Mesure d'atténuation">Campagnes de sensibilisation ludiques, système de récompenses attractif, marketing ciblé</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Risque">Pannes techniques RVM</td>
-                        <td data-label="Impact">Perte de confiance utilisateur, coûts de maintenance élevés</td>
-                        <td data-label="Mesure d'atténuation">Maintenance préventive, conception robuste, équipe de support technique réactive, stock de pièces détachées</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Risque">Concurrence accrue</td>
-                        <td data-label="Impact">Perte de parts de marché</td>
-                        <td data-label="Mesure d'atténuation">Innovation continue (R&amp;D), protection de la propriété intellectuelle, partenariats stratégiques</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Risque">Évolution réglementaire</td>
-                        <td data-label="Impact">Ajustements coûteux, retards</td>
-                        <td data-label="Mesure d'atténuation">Veille réglementaire active, collaboration avec les autorités, flexibilité du modèle d'affaires</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="conclusion">
-            <p><strong>KHADRACYCLE</strong> est un engagement envers un avenir durable. Nous sommes passionnés par l'innovation et déterminés à faire une différence significative dans la gestion des déchets et la sensibilisation environnementale en Algérie et au-delà.</p>
-            <p>Pour toute question, information complémentaire ou opportunité de partenariat, n'hésitez pas à nous contacter : <strong><a href="mailto:laribinacer2002@gmail.com">laribinacer2002@gmail.com</a></strong>.</p>
-        </div>
-
-        <footer>
-            <p><em>© KHADRACYCLE – Tous droits réservés.</em></p>
-        </footer>
-    </div>
-</body>
-</html>
+        
+        <div class="content">
+            <!-- Section 1 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">⚙️</span>
+                    <span>Coût de fabrication RVM</span>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Élément</th>
+                            <th>Détail</th>
+                            <th>Coût (DZD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Raspberry Pi + carte IA</td>
+                            <td>Gestion IA et capteurs</td>
+                            <td>30 000</td>
+                        </tr>
+                        <tr>
+                            <td>Caméra HD + capteurs</td>
+                            <td>Vision et détection</td>
+                            <td>15 000</td>
+                        </tr>
+                        <tr>
+                            <td>Servomoteurs industriels (3x)</td>
+                            <td>Tri des déchets</td>
+                            <td>10 000</td>
+                        </tr>
+                        <tr>
+                            <td>Capteur ultrason + sécurité</td>
+                            <td>Détection d'objet</td>
+                            <td>3 000</td>
+                        </tr>
+                        <tr>
+                            <td>Structure acier galvanisé / inox</td>
+                            <td>Châssis complet, bacs, trappes</td>
+                            <td>45 000</td>
+                        </tr>
+                        <tr>
+                            <td>Électronique, PCB, alimentation</td>
+                            <td>Relais, câblage, sécurité</td>
+                            <td>10 000</td>
+                        </tr>
+                        <tr>
+                            <td>Écran + lecteur + imprimante QR</td>
+                            <td>Récompense instantanée</td>
+                            <td>25 000</td>
+                        </tr>
+                        <tr>
+                            <td>Montage, peinture, calibrage</td>
+                            <td>Finition</td>
+                            <td>10 000</td>
+                        </tr>
+                        <tr>
+                            <td>Transport / marge / certification</td>
+                            <td>Assurance et logistique</td>
+                            <td>7 000</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2">✅ TOTAL PAR RVM</td>
+                            <td>195 000 DZD (~1 500 €)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Section 2 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">💻</span>
+                    <span>Logiciel + Application + IA (Auto-développement)</span>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); padding: 20px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid #3b82f6;">
+                    <p style="color: #1e40af; font-weight: 600; margin-bottom: 8px;">💡 Développement en interne</p>
+                    <p style="color: #1e3a8a; font-size: 0.95em;">Gestion complète avec Python, Flutter, Firebase, PyTorch. Les coûts deviennent principalement du matériel, de l'énergie, du temps et un petit hébergement cloud.</p>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Poste</th>
+                            <th>Détail</th>
+                            <th>Coût (DZD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>App mobile (Android / Flutter)</td>
+                            <td>QR code, points, interface utilisateur</td>
+                            <td>100 000</td>
+                        </tr>
+                        <tr>
+                            <td>Backend + base de données</td>
+                            <td>Python Flask ou Firebase</td>
+                            <td>80 000</td>
+                        </tr>
+                        <tr>
+                            <td>IA (entraînement + intégration RPi)</td>
+                            <td>PyTorch / TensorFlow + caméra</td>
+                            <td>100 000</td>
+                        </tr>
+                        <tr>
+                            <td>Dashboard web (admin)</td>
+                            <td>Statistiques + gestion borne</td>
+                            <td>50 000</td>
+                        </tr>
+                        <tr>
+                            <td>Hébergement cloud (1 an)</td>
+                            <td>VPS / Firebase / OVH</td>
+                            <td>20 000</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="2">✅ TOTAL LOGICIEL ET IA</td>
+                            <td>350 000 DZD (~2 700 €)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Section 3 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">💰</span>
+                    <span>Coût total projet (10 machines)</span>
+                </div>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-title">10 RVM × 195 000</div>
+                        <div class="card-value">1.95M</div>
+                        <div class="card-desc">DZD</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Logiciel + IA</div>
+                        <div class="card-value">350K</div>
+                        <div class="card-desc">DZD</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Communication</div>
+                        <div class="card-value">300K</div>
+                        <div class="card-desc">DZD</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Installation</div>
+                        <div class="card-value">250K</div>
+                        <div class="card-desc">DZD</div>
+                    </div>
+                </div>
+                
+                <div class="card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none;">
+                    <div class="card-title" style="color: rgba(255,255,255,0.9);">INVESTISSEMENT TOTAL</div>
+                    <div class="card-value" style="color: white;">2.85M DZD</div>
+                    <div class="card-desc" style="color: rgba(255,255,255,0.9);">≈ 22 000 €</div>
+                </div>
+            </div>
+            
+            <!-- Section 4 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">♻️</span>
+                    <span>Sources de revenus</span>
+                </div>
+                
+                <div class="revenue-item">
+                    <h3>1. Vente des matériaux recyclés</h3>
+                    <p>Chaque RVM trie en moyenne :</p>
+                    <ul>
+                        <li>20 kg plastique/mois × 80 DZD/kg = 1 600 DZD</li>
+                        <li>5 kg aluminium/mois × 600 DZD/kg = 3 000 DZD</li>
+                        <li>20 kg verre/mois × 20 DZD/kg = 400 DZD</li>
+                    </ul>
+                    <div class="highlight">Total : ~5 000 DZD/mois par RVM</div>
+                </div>
+                
+                <div class="revenue-item" style="border-left-color: #3b82f6;">
+                    <h3>2. Sponsoring / affichage d'entreprises</h3>
+                    <p>Entreprises payent pour :</p>
+                    <ul>
+                        <li>Logo sur borne</li>
+                        <li>Écran dynamique</li>
+                        <li>Visibilité dans l'app</li>
+                    </ul>
+                    <div class="highlight">3 000 DZD/mois × 2 sponsors = 6 000 DZD/mois par RVM</div>
+                </div>
+                
+                <div class="revenue-item" style="border-left-color: #8b5cf6;">
+                    <h3>3. Location ou vente des RVM</h3>
+                    <p>Deux options :</p>
+                    <ul>
+                        <li>Vente directe : 250 000 DZD par RVM</li>
+                        <li>Location : 10 000 DZD/mois par collectivité (contrat 2 ans)</li>
+                    </ul>
+                    <div class="highlight">Moyenne 50/50 = 8 000 DZD/mois par RVM</div>
+                </div>
+                
+                <div class="revenue-item" style="border-left-color: #f59e0b;">
+                    <h3>4. Publicité dans l'application</h3>
+                    <p>Affichage de bannières écolos, réductions partenaires, etc.</p>
+                    <div class="highlight">1 000 DZD/mois par borne connectée</div>
+                </div>
+                
+                <div class="revenue-item" style="border-left-color: #ec4899;">
+                    <h3>5. E-commerce vert (boutique des récompenses)</h3>
+                    <p>Les utilisateurs convertissent leurs points en :</p>
+                    <ul>
+                        <li>Bons d'achat</li>
+                        <li>Produits écolos partenaires</li>
+                        <li>Tickets culturels</li>
+                    </ul>
+                    <div class="highlight">Commission 10% = ~500 DZD/mois/machine</div>
+                </div>
+                
+                <table style="margin-top: 30px;">
+                    <thead>
+                        <tr>
+                            <th>Source de revenu</th>
+                            <th>Montant (DZD/mois)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Revente des matériaux</td>
+                            <td>5 000</td>
+                        </tr>
+                        <tr>
+                            <td>Sponsoring entreprises</td>
+                            <td>6 000</td>
+                        </tr>
+                        <tr>
+                            <td>Location ou vente</td>
+                            <td>8 000</td>
+                        </tr>
+                        <tr>
+                            <td>Publicité dans l'app</td>
+                            <td>1 000</td>
+                        </tr>
+                        <tr>
+                            <td>E-commerce (boutique)</td>
+                            <td>500</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td>✅ REVENU TOTAL MOYEN / RVM</td>
+                            <td>~20 500 DZD/mois (~158 €)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Section 5 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">📊</span>
+                    <span>Projection financière sur 3 ans</span>
+                </div>
+                
+                <table class="projection-table">
+                    <thead>
+                        <tr>
+                            <th>Année</th>
+                            <th>RVM actives</th>
+                            <th>Revenu total (DZD)</th>
+                            <th>Dépenses cumulées</th>
+                            <th>Résultat net</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>2025</strong></td>
+                            <td>10</td>
+                            <td>2 460 000</td>
+                            <td>2 850 000</td>
+                            <td class="negative">–390 000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2026</strong></td>
+                            <td>50</td>
+                            <td>12 300 000</td>
+                            <td>7 000 000</td>
+                            <td class="positive">+5 300 000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2027</strong></td>
+                            <td>200</td>
+                            <td>49 200 000</td>
+                            <td>20 000 000</td>
+                            <td class="positive">+29 200 000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="font-size: 1.2em; color: #059669; font-weight: 700;">✅ Rentabilité atteinte dès la 2ᵉ année</p>
+                    <p style="font-size: 1.3em; color: #1f2937; font-weight: 800; margin-top: 10px;">ROI total ≈ 215% sur 3 ans</p>
+                </div>
+            </div>
+            
+            <!-- Section 6 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="icon">🌿</span>
+                    <span>Impacts mesurables (200 RVM)</span>
+                </div>
+                
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="icon">🔵</div>
+                        <div class="value">3M</div>
+                        <div class="label">Bouteilles plastique<br>(~45 tonnes/an)</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="icon">⚪</div>
+                        <div class="value">600K</div>
+                        <div class="label">Canettes alu<br>(~12 tonnes/an)</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="icon">🟢</div>
+                        <div class="value">1M</div>
+                        <div class="label">Verre<br>(~20 tonnes/an)</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="icon">🌱</div>
+                        <div class="value">≈60t</div>
+                        <div class="label">CO₂ évité<br>par an</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="icon">👥</div>
+                        <div class="value">40</div>
+                        <div class="label">Emplois<br>directs</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="icon">🤝</div>
+                        <div class="value">80</div>
+                        <div class="label">Emplois<br>indirects</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="icon">📱</div>
+                        <div class="value">120K+</div>
+                        <div class="label">Utilisateurs<br>app</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="icon">🏢</div>
+                        <div class="value">60</div>
+                        <div class="label">Sponsors<br>partenaires</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary -->
+            <div class="summary-box">
+                <h2>🎯 Résumé Final Pro</h2>
+                
+                <div class="summary-item">
+                    <div class="icon">💡</div>
+                    <div class="text">
+                        <strong>KHADRACYCLE</strong> est une machine intelligente de recyclage qui récompense les citoyens et valorise les entreprises.
+                    </div>
+                </div>
+                
+                <div class="summary-item">
+                    <div class="icon">💰</div>
+                    <div class="text">
+                        Coût d'une borne complète : <span class="highlight">195 000 DZD (~1 500 €)</span>
+                    </div>
+                </div>
+                
+                <div class="summary-item">
+                    <div class="icon">📈</div>
+                    <div class="text">
+                        Revenu moyen par borne : <span class="highlight">20 500 DZD/mois (~158 €)</span>
+                    </div>
+                </div>
+                
+                <div class="summary-item">
+                    <div class="icon">♻️</div>
+                    <div class="text">
+                        Rentabilité : en <span class="highlight">18 à 24 mois</span>
+                    </div>
+                </div>
+                
+                <div class="summary-item">
+                    <div class="icon">🌍</div>
+                    <div class="text">
+                        Impact : <span class="highlight">>70 tonnes de déchets recyclés/an</span> pour 200 bornes
+                    </div>
+                </div>
+                
+                <div class="summary-item">
+                    <div class="icon">
